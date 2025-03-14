@@ -1,6 +1,6 @@
 if (love.system.getOS() == 'OS X' ) and (jit.arch == 'arm64' or jit.arch == 'arm') then jit.off() end
 require "engine/object"
-require "bit"
+-- require "bit"
 require "engine/string_packer"
 require "engine/controller"
 require "back"

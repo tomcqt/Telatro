@@ -55,7 +55,7 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
 {
     //Glow effect
     number glow = 0.;
-    int glow_samples = 4;
+    const int glow_samples = 4;
     int actual_glow_samples = 0;
     number glow_dist = 0.0015;
     number _a = 0.;
