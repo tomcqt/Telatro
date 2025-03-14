@@ -1,5 +1,5 @@
 VERSION = '1.0.1o'
-VERSION = VERSION..'-FULL'
+VERSION = VERSION..'-FULL_web'
 --check_version
 
 --Globals
@@ -10,27 +10,27 @@ function Game:set_globals()
     --||||||||||||||||||||||||||||||
     --         Feature Flags
     --||||||||||||||||||||||||||||||
-    self.F_QUIT_BUTTON = true               --Include the main menu 'Quit' button
+    self.F_QUIT_BUTTON = false               --Include the main menu 'Quit' button
     self.F_SKIP_TUTORIAL = false            --Completely skip the tutorial on fresh save
     self.F_BASIC_CREDITS = false            --Remove references to Daniel Linssens itch.io
-    self.F_EXTERNAL_LINKS = true            --Remove all references to any external links (mainly for console)
+    self.F_EXTERNAL_LINKS = false            --Remove all references to any external links (mainly for console)
     self.F_ENABLE_PERF_OVERLAY = false      --Disable debugging tool for performance of each frame
-    self.F_NO_SAVING = false                --Disables all 'run' saving
+    self.F_NO_SAVING = true                --Disables all 'run' saving
     self.F_MUTE = false                     --Force mute all sounds
-    self.F_SOUND_THREAD = true              --Have sound in a separate thread entirely - if not sounds will run on main thread
-    self.F_VIDEO_SETTINGS = true            --Let the player change their video settings
+    self.F_SOUND_THREAD = false              --Have sound in a separate thread entirely - if not sounds will run on main thread
+    self.F_VIDEO_SETTINGS = false            --Let the player change their video settings
     self.F_CTA = false                      --Call to Action video for the Demo - keep this as false
     self.F_VERBOSE = true                   --Extra debug information on screen and in the console
     self.F_HTTP_SCORES = false              --Include HTTP scores to fetch/set high scores
     self.F_RUMBLE = nil                     --Add rumble to the primary controller - adjust this for amount of rumble
     self.F_CRASH_REPORTS = false            --Send Crash reports over the internet
-    self.F_NO_ERROR_HAND = false            --Hard crash without error message screen
+    self.F_NO_ERROR_HAND = true            --Hard crash without error message screen
     self.F_SWAP_AB_PIPS = false             --Swapping button pips for A and B buttons (mainly for switch)
     self.F_SWAP_AB_BUTTONS = false          --Swapping button function for A and B buttons (mainly for switch)
     self.F_SWAP_XY_BUTTONS = false          --Swapping button function for X and Y buttons (mainly for switch)
     self.F_NO_ACHIEVEMENTS = false          --Disable achievements
     self.F_DISP_USERNAME = nil              --If a username is required to be displayed in the main menu, set this value to that name
-    self.F_ENGLISH_ONLY = nil               --Disable language selection - only in english
+    self.F_ENGLISH_ONLY = true               --Disable language selection - only in english
     self.F_GUIDE = false                    --Replace back/select button with 'guide' button
     self.F_JAN_CTA = false                  --Call to action for Jan demo
     self.F_HIDE_BG = false                  --Hiding the game objects when paused

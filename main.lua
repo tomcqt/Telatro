@@ -85,33 +85,41 @@ end
 
 function love.load() 
 	G:start_up()
-	--Steam integration
-	local os = love.system.getOS()
-	if os == 'OS X' or os == 'Windows' then 
-		local st = nil
-		--To control when steam communication happens, make sure to send updates to steam as little as possible
-		if os == 'OS X' then
-			local dir = love.filesystem.getSourceBaseDirectory()
-			local old_cpath = package.cpath
-			package.cpath = package.cpath .. ';' .. dir .. '/?.so'
-			st = require 'luasteam'
-			package.cpath = old_cpath
-		else
-			st = require 'luasteam'
-		end
+	
+	-- ################################################################
+	-- # Keep this commented out or else the game will crash! Telatro #
+	-- # does not need steam, so we should not use the "luasteam"     #
+	-- # library. If we do import it, then the game crashes, making   #
+	-- # it unplayable. Very sad! :(            -tomcat (telatro dev) #
+	-- ################################################################
 
-		st.send_control = {
-			last_sent_time = -200,
-			last_sent_stage = -1,
-			force = false,
-		}
-		if not (st.init and st:init()) then
-			love.event.quit()
-		end
-		--Set up the render window and the stage for the splash screen, then enter the gameloop with :update
-		G.STEAM = st
-	else
-	end
+	-- --Steam integration
+	-- local os = love.system.getOS()
+	-- if os == 'OS X' or os == 'Windows' then 
+	-- 	local st = nil
+	-- 	--To control when steam communication happens, make sure to send updates to steam as little as possible
+	-- 	if os == 'OS X' then
+	-- 		local dir = love.filesystem.getSourceBaseDirectory()
+	-- 		local old_cpath = package.cpath
+	-- 		package.cpath = package.cpath .. ';' .. dir .. '/?.so'
+	-- 		st = require 'luasteam'
+	-- 		package.cpath = old_cpath
+	-- 	else
+	-- 		st = require 'luasteam'
+	-- 	end
+
+	-- 	st.send_control = {
+	-- 		last_sent_time = -200,
+	-- 		last_sent_stage = -1,
+	-- 		force = false,
+	-- 	}
+	-- 	if not (st.init and st:init()) then
+	-- 		love.event.quit()
+	-- 	end
+	-- 	--Set up the render window and the stage for the splash screen, then enter the gameloop with :update
+	-- 	G.STEAM = st
+	-- else
+	-- end
 
 	--Set the mouse to invisible immediately, this visibility is handled in the G.CONTROLLER
 	love.mouse.setVisible(false)

@@ -3,7 +3,7 @@ _DEMO = false
 
 function love.conf(t)
 	t.console = not _RELEASE_MODE
-	t.title = 'Balatro'
+	t.title = 'Telatro'
 	t.window.width = 0
     t.window.height = 0
 	t.window.minwidth = 100
