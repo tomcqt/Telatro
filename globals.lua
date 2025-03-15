@@ -15,7 +15,7 @@ function Game:set_globals()
     self.F_BASIC_CREDITS = false            --Remove references to Daniel Linssens itch.io
     self.F_EXTERNAL_LINKS = false            --Remove all references to any external links (mainly for console)
     self.F_ENABLE_PERF_OVERLAY = false      --Disable debugging tool for performance of each frame
-    self.F_NO_SAVING = true                --Disables all 'run' saving
+    self.F_NO_SAVING = false                --Disables all 'run' saving
     self.F_MUTE = false                     --Force mute all sounds
     self.F_SOUND_THREAD = false              --Have sound in a separate thread entirely - if not sounds will run on main thread
     self.F_VIDEO_SETTINGS = false            --Let the player change their video settings
