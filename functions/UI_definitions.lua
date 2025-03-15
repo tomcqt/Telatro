@@ -4350,6 +4350,12 @@ function G.UIDEF.credits()
                       {n=G.UIT.R, config={align = "cm", padding = 0.2}, nodes={
                         {n=G.UIT.T, config={text = "Modified with their permission", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
                       }},
+                      {n=G.UIT.R, config={align = "cm", padding = 0.2}, nodes={
+                        {n=G.UIT.T, config={text = "--------------------------------", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = false}},
+                      }},
+                      {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+                        {n=G.UIT.T, config={text = "Running Telatro by Tomcat v1.0", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}}, -- Telatro Version Number!
+                      }},
                       {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
                         UIBox_button({label = {'Telatro Source Code'}, button = 'telatro_source'})
                       }} or nil,
