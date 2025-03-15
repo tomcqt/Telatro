@@ -125,11 +125,12 @@
         })(),
         setStatus: function (text) {
           if (text) {
-            drawLoadingText(text);
-            document.getElementById("loadingCanvas").style.display = "none";
+            document.getElementById("header0").innerHTML =
+              "<h1>" + text + "</h1>";
           } else if (Module.remainingDependencies === 0) {
             document.getElementById("loadingCanvas").style.display = "none";
             document.getElementById("canvas").style.visibility = "visible";
+            document.getElementById("header0").remove();
           }
         },
         totalDependencies: 0,
@@ -148,7 +149,7 @@
           );
         },
       };
-      Module.setStatus("Downloading...");
+      // Module.setStatus("Downloading...");
       window.onerror = function (event) {
         // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
         Module.setStatus("Exception thrown, see JavaScript console");
@@ -163,7 +164,7 @@
 
       function load() {
         applicationLoad(document.getElementById("data"));
-        document.getElementById("header0").remove();
+        // document.getElementById("header0").remove();
       }
     </script>
     <script type="text/javascript" src="game.js"></script>
