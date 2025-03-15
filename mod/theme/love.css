@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+}
+
+@font-face {
+  font-family: "balatro";
+  src: url("balatro.ttf");
+}
+
+#header0 {
+  font-family: balatro;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: #0000;
+  border: 0px none;
+}
+
+/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+#canvas {
+  padding-right: 0;
+  display: block;
+  border: 0px none;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
