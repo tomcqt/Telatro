@@ -41,83 +41,85 @@ function Game:set_globals()
     self.F_MOBILE_UI = false
     self.F_HIDE_BETA_LANGS = nil
 
+    -- We aren't running any of the below systems in reality, as we are using the web. But LOVE.JS still sends OS info anyways, so we just comment this out so we can use our own config.
+
     --loadstring("\105\102\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\105\79\83\39\32\111\114\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\65\110\100\114\111\105\100\39\32\116\104\101\110\10\32\32\108\111\118\101\46\101\118\101\110\116\46\113\117\105\116\40\41\10\101\110\100\10")()
-    if love.system.getOS() == 'Windows' then
-        self.F_DISCORD = true
-        self.F_SAVE_TIMER = 5
-        self.F_ENGLISH_ONLY = false
-        self.F_CRASH_REPORTS = false
-    end
+    -- if love.system.getOS() == 'Windows' then
+    --     self.F_DISCORD = true
+    --     self.F_SAVE_TIMER = 5
+    --     self.F_ENGLISH_ONLY = false
+    --     self.F_CRASH_REPORTS = false
+    -- end
 
-    if love.system.getOS() == 'OS X' then
-        self.F_SAVE_TIMER = 5
-        self.F_DISCORD = true
-        self.F_ENGLISH_ONLY = false
-        self.F_CRASH_REPORTS = false
-    end
+    -- if love.system.getOS() == 'OS X' then
+    --     self.F_SAVE_TIMER = 5
+    --     self.F_DISCORD = true
+    --     self.F_ENGLISH_ONLY = false
+    --     self.F_CRASH_REPORTS = false
+    -- end
 
-    if love.system.getOS() == 'Nintendo Switch' then
-        self.F_HIDE_BETA_LANGS = true
-        self.F_BASIC_CREDITS = true
-        self.F_NO_ERROR_HAND = true
-        self.F_QUIT_BUTTON = false
-        self.F_SKIP_TUTORIAL = false
-        self.F_ENABLE_PERF_OVERLAY = false
-        self.F_NO_SAVING = false
-        self.F_MUTE = false
-        self.F_SOUND_THREAD = true
-        self.F_SWAP_AB_PIPS = true
-        self.F_SWAP_AB_BUTTONS = false
-        self.F_SWAP_XY_BUTTONS = true
-        self.F_VIDEO_SETTINGS = false
-        self.F_RUMBLE = 0.7
-        self.F_CTA = false
-        self.F_VERBOSE = false
-        self.F_NO_ACHIEVEMENTS = true
-        self.F_ENGLISH_ONLY = nil
+    -- if love.system.getOS() == 'Nintendo Switch' then
+    --     self.F_HIDE_BETA_LANGS = true
+    --     self.F_BASIC_CREDITS = true
+    --     self.F_NO_ERROR_HAND = true
+    --     self.F_QUIT_BUTTON = false
+    --     self.F_SKIP_TUTORIAL = false
+    --     self.F_ENABLE_PERF_OVERLAY = false
+    --     self.F_NO_SAVING = false
+    --     self.F_MUTE = false
+    --     self.F_SOUND_THREAD = true
+    --     self.F_SWAP_AB_PIPS = true
+    --     self.F_SWAP_AB_BUTTONS = false
+    --     self.F_SWAP_XY_BUTTONS = true
+    --     self.F_VIDEO_SETTINGS = false
+    --     self.F_RUMBLE = 0.7
+    --     self.F_CTA = false
+    --     self.F_VERBOSE = false
+    --     self.F_NO_ACHIEVEMENTS = true
+    --     self.F_ENGLISH_ONLY = nil
         
-        self.F_EXTERNAL_LINKS = false
-        self.F_HIDE_BG = true
-    end
+    --     self.F_EXTERNAL_LINKS = false
+    --     self.F_HIDE_BG = true
+    -- end
 
-    if love.system.getOS() == 'ps4' or love.system.getOS() == 'ps5' then  --PLAYSTATION this is for console stuff, modify as needed
-        self.F_HIDE_BETA_LANGS = true
-        self.F_NO_ERROR_HAND = true
-        self.F_QUIT_BUTTON = false
-        self.F_SKIP_TUTORIAL = false
-        self.F_ENABLE_PERF_OVERLAY = false
-        self.F_NO_SAVING = false
-        self.F_MUTE = false
-        self.F_SOUND_THREAD = true
-        self.F_VIDEO_SETTINGS = false
-        self.F_RUMBLE = 0.5
-        self.F_CTA = false
-        self.F_VERBOSE = false
+    -- if love.system.getOS() == 'ps4' or love.system.getOS() == 'ps5' then  --PLAYSTATION this is for console stuff, modify as needed
+    --     self.F_HIDE_BETA_LANGS = true
+    --     self.F_NO_ERROR_HAND = true
+    --     self.F_QUIT_BUTTON = false
+    --     self.F_SKIP_TUTORIAL = false
+    --     self.F_ENABLE_PERF_OVERLAY = false
+    --     self.F_NO_SAVING = false
+    --     self.F_MUTE = false
+    --     self.F_SOUND_THREAD = true
+    --     self.F_VIDEO_SETTINGS = false
+    --     self.F_RUMBLE = 0.5
+    --     self.F_CTA = false
+    --     self.F_VERBOSE = false
         
-        self.F_GUIDE = true
-        self.F_PS4_PLAYSTATION_GLYPHS = false
+    --     self.F_GUIDE = true
+    --     self.F_PS4_PLAYSTATION_GLYPHS = false
 
-        self.F_EXTERNAL_LINKS = false
-        self.F_HIDE_BG = true
-        --self.F_LOCAL_CLIPBOARD = true
-    end
+    --     self.F_EXTERNAL_LINKS = false
+    --     self.F_HIDE_BG = true
+    --     --self.F_LOCAL_CLIPBOARD = true
+    -- end
 
-    if love.system.getOS() == 'xbox' then
-        self.F_HIDE_BETA_LANGS = true
-        self.F_NO_ERROR_HAND = true
-        self.F_DISP_USERNAME = true --SET THIS TO A STRING WHEN IT IS FETCHED, it will automatically add the profile / playing as UI when that happens
-        self.F_SKIP_TUTORIAL = false
-        self.F_ENABLE_PERF_OVERLAY = false
-        self.F_NO_SAVING = false
-        self.F_MUTE = false
-        self.F_SOUND_THREAD = true
-        self.F_VIDEO_SETTINGS = false
-        self.F_RUMBLE = 1.0
-        self.F_CTA = false
-        self.F_VERBOSE = false
-        self.F_EXTERNAL_LINKS = false
-        self.F_HIDE_BG = true
-    end
+    -- if love.system.getOS() == 'xbox' then
+    --     self.F_HIDE_BETA_LANGS = true
+    --     self.F_NO_ERROR_HAND = true
+    --     self.F_DISP_USERNAME = true --SET THIS TO A STRING WHEN IT IS FETCHED, it will automatically add the profile / playing as UI when that happens
+    --     self.F_SKIP_TUTORIAL = false
+    --     self.F_ENABLE_PERF_OVERLAY = false
+    --     self.F_NO_SAVING = false
+    --     self.F_MUTE = false
+    --     self.F_SOUND_THREAD = true
+    --     self.F_VIDEO_SETTINGS = false
+    --     self.F_RUMBLE = 1.0
+    --     self.F_CTA = false
+    --     self.F_VERBOSE = false
+    --     self.F_EXTERNAL_LINKS = false
+    --     self.F_HIDE_BG = true
+    -- end
 
     --||||||||||||||||||||||||||||||
     --             Time

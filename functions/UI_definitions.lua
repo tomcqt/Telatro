@@ -4350,6 +4350,9 @@ function G.UIDEF.credits()
                       {n=G.UIT.R, config={align = "cm", padding = 0.2}, nodes={
                         {n=G.UIT.T, config={text = "Modified with their permission", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
                       }},
+                      {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+                        UIBox_button({label = {'Telatro Source Code'}, button = 'telatro_source'})
+                      }} or nil,
                     }},
                     {n=G.UIT.C, config={align = "tm", padding = 0.1,outline_colour = G.C.JOKER_GREY, r = 0.1, outline = 1}, nodes={
                       {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
@@ -4402,6 +4405,16 @@ function G.UIDEF.credits()
                         {n=G.UIT.C, config={align = "tl", padding = 0.03}, nodes={
                           {n=G.UIT.R, config={align = "cl", padding = 0}, nodes={
                             {n=G.UIT.T, config={text = 'william341', scale = text_scale*0.35, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
+                          }},
+                        }},
+                      }},
+                      {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+                        {n=G.UIT.T, config={text = "Web (LOVE.js)", scale = text_scale*0.45, colour = G.C.GOLD, shadow = true}},
+                      }},
+                      {n=G.UIT.R, config={align = "tm", padding = 0}, nodes={
+                        {n=G.UIT.C, config={align = "tl", padding = 0.03}, nodes={
+                          {n=G.UIT.R, config={align = "cl", padding = 0}, nodes={
+                            {n=G.UIT.T, config={text = 'tomcat', scale = text_scale*0.35, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
                           }},
                         }},
                       }},

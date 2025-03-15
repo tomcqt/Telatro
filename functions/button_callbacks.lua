@@ -1718,6 +1718,10 @@ G.FUNCS.louisf_insta = function(e)
   love.system.openURL( "https://www.instagram.com/louisfsoundtracks/" )
 end
 
+G.FUNCS.telatro_source = function(e)
+  love.system.openURL( "https://git.tomcat.sh/Telatro" )
+end
+
 G.FUNCS.wishlist_steam = function(e)
   love.system.openURL( "https://store.steampowered.com/app/2379780/Balatro/#game_area_purchase" )
 end
