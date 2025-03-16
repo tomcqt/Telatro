@@ -2,6 +2,9 @@ VERSION = '1.0.1o'
 VERSION = VERSION..'-FULL_web'
 --check_version
 
+-- Add Telatro Version Number
+TELATRO_VERSION = "1.1.0"
+
 --Globals
 
 function Game:set_globals()
@@ -40,6 +43,7 @@ function Game:set_globals()
     self.F_SAVE_TIMER = 30
     self.F_MOBILE_UI = false
     self.F_HIDE_BETA_LANGS = nil
+    self.TELATRO = TELATRO_VERSION
 
     -- We aren't running any of the below systems in reality, as we are using the web. But LOVE.JS still sends OS info anyways, so we just comment this out so we can use our own config.
 

@@ -118,12 +118,15 @@ function boot_timer(_label, _next, progress)
   love.graphics.setColor(1, 1, 1,1)
   love.graphics.setLineWidth(3)
   love.graphics.rectangle('line', realw/2 - 150, realh/2 - 15, 300, 30, 5)
-  if G.F_VERBOSE and not _RELEASE_MODE then love.graphics.print("LOADING: ".._next, realw/2 - 150, realh/2 +40) end
+  --[[ if G.F_VERBOSE and not _RELEASE_MODE then ]]love.graphics.print("LOADING: ".._next, realw/2 - 150, realh/2 +40)--[[ end]]
+  love.graphics.print("running telatro v"..G.TELATRO.." by tomcat", realw/2 - 150, realh/2 + 80)
+  love.graphics.print("more info in options > credits", realw/2 - 150, realh/2 + 100)
   love.graphics.pop()
   love.graphics.present()
 
   G.ARGS.bt = G.ARGS.bt or love.timer.getTime()
   G.ARGS.bt = love.timer.getTime()
+
 end
 
 function EMPTY(t)

@@ -2394,6 +2394,23 @@ function create_UIBox_test_framework(variables)
 return t                                      
 end
 
+function G.UIDEF.telatro_popup()
+  return {n=G.UIT.ROOT, config = {align = "cm", minw = G.ROOM.T.w*5, minh = G.ROOM.T.h*5,padding = 0.15, r = 0.1, colour = {G.C.BLACK[1], G.C.BLACK[2], G.C.BLACK[3],0.6}}, nodes={
+    {n=G.UIT.C, config={align = "cm", minh = 1,r = 0.3, padding = 0.1, minw = 1, colour = G.C.WHITE, shadow = true}, nodes={
+      {n=G.UIT.C, config={align = "cm", minh = 1,r = 0.2, padding = 0.2, minw = 1, colour = G.C.CLEAR, outline = 1, outline_colour = G.C.BLACK}, nodes={
+        {n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes=
+          nodes
+        },
+        {n=G.UIT.R, config={align = "cm", minw = 2.5, padding = 0.1, r = 0.1, hover = true, colour = G.C.ORANGE, button = "exit_overlay_menu", shadow = true}, nodes={
+            {n=G.UIT.R, config={align = "cm", padding = 0, no_fill = true}, nodes={
+              {n=G.UIT.T, config={text = "Back", scale = 0.5, colour = G.C.UI.TEXT_LIGHT}}
+            }}
+        }},
+      }}
+    }}
+  }}
+end
+
 function G.UIDEF.usage_tabs()
   return create_UIBox_generic_options({back_func = 'high_scores', contents ={create_tabs(
     {tabs = {
@@ -4354,7 +4371,7 @@ function G.UIDEF.credits()
                         {n=G.UIT.T, config={text = "--------------------------------", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = false}},
                       }},
                       {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
-                        {n=G.UIT.T, config={text = "Running Telatro by Tomcat v1.0", scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}}, -- Telatro Version Number!
+                        {n=G.UIT.T, config={text = "Running Telatro by Tomcat v"..G.TELATRO, scale = text_scale*0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}}, -- Telatro Version Number!
                       }},
                       {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
                         UIBox_button({label = {'Telatro Source Code'}, button = 'telatro_source'})
