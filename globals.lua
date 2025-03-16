@@ -11,7 +11,7 @@ function Game:set_globals()
     --         Feature Flags
     --||||||||||||||||||||||||||||||
     self.F_QUIT_BUTTON = false               --Include the main menu 'Quit' button
-    self.F_SKIP_TUTORIAL = true            --Completely skip the tutorial on fresh save
+    self.F_SKIP_TUTORIAL = false            --Completely skip the tutorial on fresh save
     self.F_BASIC_CREDITS = false            --Remove references to Daniel Linssens itch.io
     self.F_EXTERNAL_LINKS = false            --Remove all references to any external links (mainly for console)
     self.F_ENABLE_PERF_OVERLAY = false      --Disable debugging tool for performance of each frame

@@ -144,7 +144,12 @@
                   (this.totalDependencies - left) +
                   "/" +
                   this.totalDependencies +
-                  ")"
+                  " " +
+                  toString(
+                    ((this.totalDependencies - left) / this.totalDependencies) *
+                      100
+                  ) +
+                  "%)"
               : "All downloads complete."
           );
         },
